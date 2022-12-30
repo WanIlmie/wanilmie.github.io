@@ -1,0 +1,25 @@
+{% extends 'myapp/base.html' %}
+
+{% block name %}
+
+<div class="container">
+    <p class="text-center display-1 border-start border-end mb-0">{{ name }}</p>
+    <p class="text-center display-6 fw-lighter fst-italic border-start border-end border-bottom pb-2">{{ title }}</p>
+
+    <div class="row">
+        <div class="col-sm-12 mb-3 mb-sm-0">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ card_title }}</h5>
+                    <p class="card-text">{{ card_text }}</p>
+                    <a href= {{ link_findOutMore }} class="btn btn-primary">Find Out More</a>
+                </div>
+                <div class="card-footer text-muted">
+                    {{ num_day }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
