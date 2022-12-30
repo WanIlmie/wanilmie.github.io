@@ -105,7 +105,7 @@ def home(request):
 
     # Create context from query object
     context = {
-        'name': 'Wan M Ilmie',
+        'name': 'Wan Ilmie ',
         'title': 'portfolio',
         'card_title': c.title,
         'card_text': c.text,
