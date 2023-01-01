@@ -42,15 +42,7 @@ def return_graph():
         print('...parsing xml...')
         blob_xml = BeautifulSoup(blob_data, 'xml')
         blob_tag = set(str(tag.name) for tag in blob_xml.find_all())
-        print(blob_tag)
-        print('... xml parsed...')
-
-        # Data Check
-        print('...checking data...')
-        tvd_temp = blob_xml.find_all('incl')
-        print(len(tvd_temp))
-        print(tvd_temp[-1].text)
-        print('... data checked...')
+        print('...xml parsed...')
 
         # Create Panda Dataframe
         print('...creating dataframe...')
@@ -58,7 +50,6 @@ def return_graph():
         df = pd.DataFrame()
         for col in columns:
             df[col] = [float(x.text) for x in blob_xml.find_all(col)]
-        print(df)
         print('...dataframe created...')
         print('...finish...')
 
@@ -88,7 +79,6 @@ def return_graph():
             df_all_wells = pd.concat([df_all_wells, df], ignore_index=True)
         df_all_wells['neg_tvd'] = df_all_wells['tvd']*-1
         fig = px.line_3d(df_all_wells, 'dispNs', 'dispEw', 'neg_tvd', 'Well')
-        print(type(fig.get_graph()))
         print('...multiple dataframe completed...')
 
     except Exception as ex:
@@ -119,18 +109,23 @@ def home(request):
 def volveFieldDataSet(request):
 
     # Create query object from Card class
-    c = Card.objects.get(id=2)
-    c.save()
+    card_list = Card.objects.all()
 
     # Create context from query object
     context = {
         'name': 'Wan Ilmie',
         'title': 'portfolio',
-        'card_title': c.title,
-        'card_text': c.text,
-        'link_findOutMore': 'https://www.equinor.com/energy/volve-data-sharing',
-        'num_day': c.num_day(),
         'graph': return_graph()
     }
+    
+    # Iterate query object and append into context
+    n = len(Card.objects.all())
+    for i in range(n):
+        k = 'c'+str(i+1)
+        context[k] = Card.objects.get(id=i+1)
+    
+    # Published date from most recent card
+    context['num_day'] = card_list[n-1].num_day()
+    print('...page load completed...')
 
     return render(request, 'myapp/VolveFieldDataSet.html', context)

@@ -9,8 +9,8 @@ class Card(models.Model):
     pub_date = models.DateTimeField()
 
     def __str__(self):
-        return self.title
-
+        return '%s %s' % (self.id, self.title)
+    
     # Create card link
     def card_link(self):
         return self.title.replace(' ', '')
