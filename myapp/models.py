@@ -13,7 +13,7 @@ class Card(models.Model):
 
     # Create card link
     def card_link(self):
-        return 'http://wanilmie.pythonanywhere.com/'+ self.title.replace(' ', '')
+        return self.title.replace(' ', '')
 
     # Calculate time difference
     def num_day(self):
