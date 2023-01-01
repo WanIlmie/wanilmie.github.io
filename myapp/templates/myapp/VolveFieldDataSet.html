@@ -18,8 +18,27 @@
                     <h5 class="card-title">{{ c3.title }}</h5>
                     <p class="card-text">{{ c3.text }}</p>
                     {% load static %}
-                    <img src="{% static 'myapp/challenge1.png' %}" class="img-thumbnail" style='max-width: 50%;' alt="challenge1">
-                    <img src="{% static 'myapp/challenge2.png' %}" class="img-thumbnail" style='max-width: 50%;' alt="challenge2">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style='width: 50%; height: 200px;' data-bs-interval="10000">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="{% static 'myapp/challenge1.png' %}" class="img-thumbnail d-block w-100" alt="challenge1">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="{% static 'myapp/challenge2.png' %}" class="img-thumbnail d-block w-100" alt="challenge2">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <h5 class="card-title">{{ c4.title }}</h5>
+                    <p class="card-text">{{ c4.text }}</p>
 
                 </div>
                 <div class="card-footer text-muted">
