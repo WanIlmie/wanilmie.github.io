@@ -7,37 +7,20 @@
     <p class="text-center display-6 fw-lighter fst-italic border-start border-end border-bottom pb-2">{{ title }}</p>
 
     <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="col-sm-12 mb-3 mb-sm-0">
             <div class="card">
                 <div class="card-body">
+
                     <h5 class="card-title">Data Visualization</h5>
                     <div>{{ graph|safe }}</div>
-                </div>
-                <div class="card-footer text-muted">
-                    {{ num_day }}
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-3 mb-sm-0">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">{{ card_title }}</h5>
-                    <p class="card-text">{{ card_text }}</p>
-                    <a href= {{ link_findOutMore }} class="btn btn-primary">Find Out More</a>
-                </div>
-                <div class="card-footer text-muted">
-                    {{ num_day }}
-                </div>
-            </div>
-
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">{{ card_title }}</h5>
-                    <p class="card-text">{{ card_text }}</p>
+                    <h5 class="card-title">{{ c2.title }}</h5>
+                    <p class="card-text">{{ c2.text }}</p>
+                    <h5 class="card-title">{{ c3.title }}</h5>
+                    <p class="card-text">{{ c3.text }}</p>
                     {% load static %}
-                    <img src="{% static 'myapp/challenge1.png' %}" class="img-fluid" alt="challenge1">
-                    <img src="{% static 'myapp/challenge2.png' %}" class="img-fluid" alt="challenge2">
+                    <img src="{% static 'myapp/challenge1.png' %}" class="img-thumbnail" style='max-width: 50%;' alt="challenge1">
+                    <img src="{% static 'myapp/challenge2.png' %}" class="img-thumbnail" style='max-width: 50%;' alt="challenge2">
+
                 </div>
                 <div class="card-footer text-muted">
                     {{ num_day }}
