@@ -1,10 +1,10 @@
-# wanilmie.github.io
+###### wanilmie.github.io
 
-**Data Visualization**
+# **Data Visualization**
 
-file path: wanilmie.github.io/myapp/views.py
+File path: wanilmie.github.io/myapp/views.py
 
-function: return_graph()
+Function: return_graph()
 
 Credits: Equinor and the Volve license partners
 
