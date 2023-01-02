@@ -2,6 +2,8 @@
 
 # **Data Visualization**
 
+Extract from big data storage to provide snippet visualization. Additional customization for a light-weight web application. Engineers can use it to quickly visualize the data in graphs and 3D models. Helps to communicate complex scenario to team and stakeholders.
+
 File path: wanilmie.github.io/myapp/views.py
 
 Function: return_graph()
