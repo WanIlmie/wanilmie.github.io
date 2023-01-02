@@ -8,9 +8,7 @@ Exploring data visualization, data analysis, machine-learning and collaboration 
 
 My experience and skills are mainly in oil & gas upstream. My portfolio is a mix of process engineering, well intervention, project proposal and data analytical skills.
 
-Lets connect on LinkedIn or explore my github page:
-https://wanilmie.github.io/
-https://www.linkedin.com/in/wanilmie/
+Lets connect on LinkedIn https://www.linkedin.com/in/wanilmie/ or explore my github page https://wanilmie.github.io/
 
 # **Data Visualization**
 
