@@ -1,4 +1,16 @@
 ###### wanilmie.github.io
+# **About Me**
+Researching data analytic application in oil & gas. Interests in data standards for exploration & production.
+
+Types of data: Well-site Information Transfer Standard Markup Language (WITSML) for drilling, completion and well intervention. Production XML (PRODML) for production optimization.
+
+Exploring data visualization, data analysis, machine-learning and collaboration method for Volve Field Data Set. The most complete open-source Exploration & Production data available.
+
+My experience and skills are mainly in oil & gas upstream. My portfolio is a mix of process engineering, well intervention, project proposal and data analytical skills.
+
+Lets connect on LinkedIn or explore my github page:
+https://wanilmie.github.io/
+https://www.linkedin.com/in/wanilmie/
 
 # **Data Visualization**
 
